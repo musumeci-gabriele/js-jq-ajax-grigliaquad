@@ -16,7 +16,15 @@ body{
 .yellow{
   background-color: lightyellow;
   color: inherit;
-}/*// MIX */
+}
+/*// MIX */
+.container{
+  width: 420px;
+  height: 420px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
 
 /* BOXES */
 .box{
