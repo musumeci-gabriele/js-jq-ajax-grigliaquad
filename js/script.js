@@ -4,7 +4,7 @@ $(document).ready(function(){
   // Il numero ottenuto appare al centro del quadrato.
 
   // EVENTO CLICK SUL QUADRATO
-  $(".box").click(function(){
+  $(".box").click(function(this){
 
     // CHIAMATA AL SERVER PER LA GENERAZIONE DI UN NUMERO COMPRESO TRA 1 E 9
     $.ajax(
@@ -12,11 +12,11 @@ $(document).ready(function(){
         "url": "https://flynn.boolean.careers/exercises/api/random/int",
         "method": "GET",
         "success": function (data, stato) {
-        // RECUPERO DEL NUMERO DAL SERVER
-        var numServer = data.response;
-        numServer = confronto(numServer);
-        document.getElementById("number").innerHTML = numServer;
-      },
+          // RECUPERO DEL NUMERO DAL SERVER
+          var numServer = data.response;
+          confronto(numServer);
+          $(".number").html(numServer);
+        },
         "error": function (richiesta, stato, errori) {
         alert("E' avvenuto un errore. " + errore);
       }
@@ -27,7 +27,7 @@ $(document).ready(function(){
     // IN UNO DEI DUE CASI IL QUADRATO CAMBIA COLORE E STAMPA IL NUMERO AL SUO INTERNO
     function confronto(numServer){
       if (numServer <= 5) {
-        $(".box").addClass(".yellow");
+        $(".box").addClass(".red");
       }else {
         $(".box").addClass(".green");
       }
