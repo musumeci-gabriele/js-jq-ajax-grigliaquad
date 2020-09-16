@@ -19,11 +19,12 @@ body{
 }
 /*// MIX */
 .container{
-  width: 420px;
-  height: 420px;
-  margin: auto;
+  width: 340px;
+  height: 340px;
+  margin: 50px auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 /* BOXES */
@@ -32,5 +33,7 @@ body{
   height: 50px;
   border-radius: 10px;
   border: 1px solid black;
+  text-align: center;
+  padding-top: 15px;
 }
 /* //BOXES */
